@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+
+/* 全体のリセットと共通設定 */
+:root{
+--main: #5c7a42;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    background-color: rgb(255, 255, 255); /* 温かみのある白 */
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+.bg-light {
+    background-image: url(images/rice_top.jpg);
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+    white-space: nowrap;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--main); /* 農家らしいグリーン */
+    margin: 15px auto 0;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255); /* 温かみのある白 */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a:hover {
+    color: var(--main);
+}
+
+/* メインビジュアル */
+.hero {
+    height: 80vh;
+    background:url(images/rice_top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+/* 私たちのこだわり */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.about-text {
+    flex: 1;
+}
+.about-text h3 {
+    font-size: 1.5rem;
+    color: var(--main);
+    margin-bottom: 20px;
+}
+.about-text p {
+    margin-bottom: 15px;
+}
+.about-img {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 商品紹介（グリッドスタイル） */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    height: 40%;
+    overflow-x: hidden;
+}
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.product-card .price {
+    color: #b8623b;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.product-card .desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 美味しい食べ方 */
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.recipe-step {
+    background: #fff;
+    padding: 30px;
+    border-left: 5px solid #5c7a42;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.step-num {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--main);
+    text-shadow: #fff 1px 1px 1px;
+    display: block;
+}
+
+.recipe-step p{
+    color:#000;
+    font-weight: bolder;
+    backdrop-filter: blur(2em);
+    text-shadow:#fff 0.1px 0.1px;
+}
+
+.recipe-step h4 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-shadow: #fff 1px 1px 1px;
+    margin-bottom: 10px;
+    
+}
+
+
+
+/* ブログ */
+.blog-list {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.blog-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.blog-item:last-child {
+    border-bottom: none;
+}
+.blog-date {
+    font-size: 0.85rem;
+    color: #999;
+}
+.blog-item h3 a:hover {
+    color: #5c7a42;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* --- ふわっと出てくるアニメーションの初期設定 --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* 50px下に下げておく */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* JavaScriptでこのクラスがついたら表示される */
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ハンバーガーメニュー関連 --- */
+.menu-toggle { display: none; }
+.menu-icon { 
+    display: none; 
+    cursor: pointer; 
+    padding: 10px; 
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+    z-index: 1000; /* ロゴより手前に表示 */
+}
+.menu-icon span, .menu-icon span:before, .menu-icon span:after {
+    display: block; width: 25px; height: 3px; background: #333; position: relative;
+}
+.menu-icon span:before { content: ''; top: -8px; }
+.menu-icon span:after { content: ''; top: 5px; }
+
+@media (max-width: 768px) {
+    /* ヘッダーレイアウト変更 */
+    header { padding: 15px; }
+    .menu-icon { display: block; }
+    
+    /* メニュー本体 */
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        padding-top: 80px;
+        z-index: 999;
+    }
+    
+    /* チェックが入った時にメニューを表示 */
+    #menu-toggle:checked ~ .nav-menu {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .about-flex { flex-direction: column; }
+}
+/* お問い合わせページ */
+.bgbgbg{
+    background-image: url(images/rice_01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.logo a{
+    color: var(--main);
+}
+.logo a:hover{
+    color: #000;
+    border: var(--main) 1px solid;
+    background-color: var(--main);
+}
+
+.container {
+    text-align: center;
+} 
+
+.container h2{
+    margin: 0 auto;
+    width: 60%;
+    font-size: 4vw;
+    backdrop-filter: blur(0.2em);
+    margin-bottom: 40px;
+    text-shadow: #fff 0.1px 0.1px;
+} 
+.container label{
+    font-weight: bold;
+    text-shadow: #fff 0.1px 0.1px;
+    backdrop-filter: blur(0.2em);
+}
+
+.container input{
+
+    width: 40%;
+}
+
+
+
+.recipe-step:first-child{
+    background-image: url(images/wash.jpg);
+}
+
+.recipe-step:nth-of-type(2){
+    background-image: url(images/rice_wash2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.recipe-step:nth-of-type(3){
+    background-image: url(images/rice_wash3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
