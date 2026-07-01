@@ -326,8 +326,9 @@ nav ul li a:hover {
 /* 商品紹介（グリッドスタイル） */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
 }
 
 .product-card {
@@ -344,8 +345,7 @@ nav ul li a:hover {
 }
 
 .product-card img {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     border-radius: 4px;
     margin-bottom: 15px;
     height: auto;
