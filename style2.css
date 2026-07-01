@@ -98,7 +98,7 @@ nav ul li a:hover {
 /* メインビジュアル */
 .hero {
     height: 80vh;
-    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/rice_top.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/rice_top.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -178,18 +178,18 @@ nav ul li a:hover {
 }
 
 
-.about-feeled{
+.about-feeled {
     margin: 0 auto;
     padding-top: 12vh;
 }
 
-.about-feeled h3{
+.about-feeled h3 {
     font-size: 1.5rem;
     color: var(--main);
     margin-bottom: 20px;
 }
 
-.about-feeled p{
+.about-feeled p {
     line-height: 1.8;
     margin-bottom: 15px;
 }
@@ -233,9 +233,10 @@ nav ul li a:hover {
 /* Q&Aの場所 */
 /* よくある質問セクション */
 
-#faq.container{
+#faq.container {
     margin-top: 40vh;
 }
+
 .faq-content {
     max-width: 800px;
     margin: 0 auto;
@@ -246,7 +247,8 @@ nav ul li a:hover {
 }
 
 .faq-item {
-    background: #f9f9f7; /* 少し温かみのある白背景 */
+    background: #f9f9f7;
+    /* 少し温かみのある白背景 */
     padding: 30px;
     border-radius: 8px;
     border-left: 5px solid #5c7a42;
@@ -277,7 +279,7 @@ nav ul li a:hover {
 
 
 /* 栽培カレンダーのスタイル */
-#calendar.container{
+#calendar.container {
     margin-top: 40vh;
     margin-bottom: 40vh;
 }
@@ -302,13 +304,15 @@ nav ul li a:hover {
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
-    height: 200px; /* 画像の高さを統一 */
+    height: 200px;
+    /* 画像の高さを統一 */
 }
 
 .cal-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 画像をきれいにトリミング */
+    object-fit: cover;
+    /* 画像をきれいにトリミング */
 }
 
 .calendar-item h3 {
@@ -371,25 +375,27 @@ nav ul li a:hover {
 }
 
 
-.product-se h3{ 
+.product-se h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
     color: var(--main);
 }
 
-.product-se p{
+.product-se p {
     line-height: 1.8;
     padding-bottom: 25px;
     width: 80%;
     margin: 0 auto;
 
 }
+
 /* 美味しい食べ方 */
 
-#recipe.container{
+#recipe.container {
     margin-top: 40vh;
     margin-bottom: 40vh;
 }
+
 .recipe-content {
     display: flex;
     flex-direction: column;
@@ -415,7 +421,7 @@ nav ul li a:hover {
 .recipe-step p {
     color: white;
     font-weight: bolder;
-    text-shadow:black 0.5px 0.5px;
+    text-shadow: black 0.5px 0.5px;
     line-height: 1.8;
 }
 
@@ -559,6 +565,39 @@ footer {
     color: #fff;
 }
 
+/* 画像をカード内に収める設定 */
+.recipe-card {
+    padding-top: 10vh;
+}
+
+.recipe-card h3{
+    padding-top: 4vh;
+}
+
+.recipe-card li{
+    list-style: none;
+}
+
+.recipe-img {
+    width: 73%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+.recipe-img img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.recipe-card:hover .recipe-img img {
+    transform: scale(1.05);
+}
+
 /* スマホ対応 */
 @media (max-width: 768px) {
     .policy-content {
@@ -614,10 +653,8 @@ footer {
     .about-img2,
     .about-img3,
     .about-img4,
-     .about-img5
+    .about-img5 {
 
-     {
-        
         width: 100%;
     }
 }
@@ -667,7 +704,7 @@ footer {
 
 
 .recipe-step:first-child {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/wash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/wash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -677,20 +714,30 @@ footer {
 
 
 .recipe-step:nth-of-type(2) {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/rice_wash2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/rice_wash2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .recipe-step:nth-of-type(3) {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/rice_wash3.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/rice_wash3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+
 @media screen and (max-width:800px) {
-    .container {
-    }
+    .container {}
 }
