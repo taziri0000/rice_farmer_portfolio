@@ -414,6 +414,7 @@ nav ul li a:hover {
     margin-bottom: 40vh;
 }
 
+
 .recipe-content {
     display: flex;
     flex-direction: column;
@@ -782,7 +783,6 @@ footer {
 
     .container h2 {
         margin: 0 auto;
-        width: 60%;
         font-size: 4vw;
         backdrop-filter: blur(0.2em);
         margin-bottom: 40px;
