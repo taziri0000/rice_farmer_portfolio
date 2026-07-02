@@ -86,6 +86,14 @@ header {
     color: var(--main);
 }
 
+ .logo-img img{
+    width: 30px;
+    height: auto;
+    padding-right: 5px;
+    margin-bottom: 4px;
+
+ }
+
 nav ul {
     display: flex;
     list-style: none;
@@ -462,7 +470,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-.
+
 
 /* ブログ */
 .blog-list {
@@ -628,12 +636,21 @@ footer {
 }
 
 
-/* 1024px 以下でハンバーガーメニューを表示する設定 */
-@media screen and (max-width: 1238px) {
+/* 1268px 以下でハンバーガーメニューを表示する設定 */
+@media screen and (max-width: 1268px) {
 
     /* メニューアイコンを表示 */
     .menu-icon {
         display: block;
+    }
+
+    header{
+        justify-content: flex-start;
+    }
+
+    .logo-img{
+        padding-right: 5px;
+        margin-bottom: 4px;
     }
 
     /* 通常のナビを非表示にして、モバイル用メニューを表示 */
@@ -664,6 +681,7 @@ footer {
         font-size: 1.2rem;
         font-weight: bold;
     }
+
 }
 
     /* 1024px 以上（PCサイズ）の調整 */

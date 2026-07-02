@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="images/favicon16*16.ico" sizes="16x16" type="image/x-icon">
+    <link rel="icon" href="images/favicon24*24.ico" sizes="24x24" type="image/x-icon">
+    <link rel="icon" href="images/favicon32*32.ico" sizes="32x32" type="image/x-icon">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+
     <title>商品購入 - 稲美町１番地農園</title>
 </head>
+
 <body>
     <header>
         <div class="logo"><a href="index.html">稲美町１番地農園</a></div>
@@ -13,19 +21,24 @@
 
     <div class="container" style="padding-top: 120px;">
         <h2>商品購入手続き</h2>
-        <div class="purchase-box" style="max-width: 600px; margin: 0 auto; text-align: left; background: #f9f9f9; padding: 30px; border-radius: 8px;">
+        <div class="purchase-box"
+            style="max-width: 600px; margin: 0 auto; text-align: left; background: #f9f9f9; padding: 30px; border-radius: 8px;">
             <h3>選択した商品：プレミアム高栄養米 5kg</h3>
             <p>価格：3,500円（税込）</p>
             <form action="submit_order.php" method="post">
                 <p><label>数量</label><br>
-                <select name="quantity" style="width:100%; padding:10px;">
-                    <option value="1">1個</option>
-                    <option value="2">2個</option>
-                </select></p>
-                <p><label>お届け先住所</label><br><textarea name="address" style="width:100%; padding:10px;" required></textarea></p>
-                <button type="submit" style="width:100%; padding:15px; background:#5c7a42; color:#fff; border:none; border-radius:5px; margin-top:20px;">注文を確定する</button>
+                    <select name="quantity" style="width:100%; padding:10px;">
+                        <option value="1">1個</option>
+                        <option value="2">2個</option>
+                    </select>
+                </p>
+                <p><label>お届け先住所</label><br><textarea name="address" style="width:100%; padding:10px;"
+                        required></textarea></p>
+                <button type="submit"
+                    style="width:100%; padding:15px; background:#5c7a42; color:#fff; border:none; border-radius:5px; margin-top:20px;">注文を確定する</button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
