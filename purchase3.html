@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>定期便のお申し込み - 稲美町１番地農園</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">稲美町１番地農園</a></div>
+    </header>
+
+    <div class="container" style="padding-top: 120px;">
+        <h2>定期便のお申し込み</h2>
+        
+        <div class="subscription-benefit" style="max-width: 600px; margin: 0 auto 30px; padding: 20px; background: #eef3eb; border-radius: 8px; color: #5c7a42; font-weight: bold;">
+            <p>✅ いつでも休止・解約OK！</p>
+            <p>✅ 毎回精米したてをお届け</p>
+            <p>✅ 送料ずっと無料</p>
+        </div>
+
+        <div class="purchase-box" style="max-width: 600px; margin: 0 auto; text-align: left; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+            <h3>【定期便】毎月届く 新鮮米 10kg</h3>
+            <p style="font-size: 1.2rem; color: #b8623b; font-weight: bold;">月額 6,000円（税込）</p>
+            
+            <form action="submit_subscription.php" method="post">
+                <p><label>配送頻度</label><br>
+                <select name="frequency" style="width:100%; padding:10px; margin-bottom:15px;">
+                    <option value="monthly">毎月1回配送</option>
+                    <option value="bimonthly">2ヶ月に1回配送</option>
+                </select></p>
+                
+                <p><label>初回お届け希望日</label><br>
+                <input type="date" name="delivery_date" style="width:100%; padding:10px; margin-bottom:15px;" required></p>
+                
+                <p><label>お届け先住所</label><br>
+                <textarea name="address" style="width:100%; padding:10px; margin-bottom:15px;" required></textarea></p>
+                
+                <div style="font-size: 0.85rem; color: #666; margin-bottom: 20px;">
+                    ※初回申し込み後、マイページからいつでも変更・解約が可能です。特定商取引法に基づく表記を必ずご確認ください。
+                </div>
+
+                <button type="submit" style="width:100%; padding:15px; background:#5c7a42; color:#fff; border:none; border-radius:5px; font-weight:bold; cursor:pointer;">定期便を申し込む</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
